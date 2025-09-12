@@ -33,13 +33,14 @@
 
 .custom-blog-header {
 	width: 100%;
+    background:var(--post-bnr);
 	background-size: cover;
 	background-position: center bottom !important;
 	padding-top: 250px;
 	padding-bottom: 100px;
 	position: relative;
 	overflow: hidden;
-	background:var(--post-bnr);
+	
 }
 .custom-blog-header .custom-blog-header-inner h1 {
 	font-size: var(--post-bnr-title-size) !important;
