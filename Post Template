@@ -1,4 +1,3 @@
-/* POST TEMPLATE PHP */
 <?php
 /**
  * Template Name: Single Blog Post
@@ -6,15 +5,14 @@
 
 get_header();
 
-// Calculate reading time
-$word_count = str_word_count( wp_strip_all_tags( get_the_content() ) );
-$reading_time = ceil( $word_count / 150 );
-?>
+$word_count = str_word_count(strip_tags(get_the_content()));
+$reading_time = ceil($word_count / 150); 
 
+?>
 <!-- Page Title -->
-<div class="custom-blog-header">
+<div class="custom-blog-header" ">
 	<div class="custom-blog-header-inner">
-		<!-- Categories -->
+	<!-- Categories -->
 		<div class="custom-blog-categories">
 			<?php 
 			$categories = get_the_category();
@@ -27,63 +25,87 @@ $reading_time = ceil( $word_count / 150 );
 			}
 			?>
 		</div>
+
 		<h1 class="custom-blog-title"><?php the_title(); ?></h1>
-		<!-- Date -->
-		<div class="custom-blog-date">
+        <div class="custom-blog-date">
 			<?php echo get_the_date(); ?>
 		</div>
 	</div>
 </div>
 
+
+
 <!-- Body Container -->
 <div class="custom-single-container">
-	<!-- Sidebar with TOC and Reading Time -->
 	<aside class="custom-toc-sidebar">
 		<div class="custom-toc-sticky">
-			<!-- Reading Time -->
+			<!-- Reading Time & Fact Checked -->
 			<div class="blog-info">
+
 				<div class="read-container">
 					<p class="reading-time"><?php echo $reading_time; ?> Min Read</p>
 				</div>
-				<!-- Table of Contents -->
+				<!-- 	Table of Contents	-->
 				<?php echo do_shortcode('[ez-toc]'); ?>
 			</div>
 		</div>
 	</aside>
+
 
 	<!-- Main Content Area -->
 	<div class="custom-post-content">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<article <?php post_class(); ?>>
 			<div class="entry-content">
-				<?php if ( has_post_thumbnail() ) : ?>
-				<div class="post-featured-image">
-					<?php the_post_thumbnail('full', ['class' => 'featured-image']); ?>
-				</div>
-				<?php endif; ?>
+				<?php //the_content(); 
+				if ( has_post_thumbnail() ) {
+					echo '<div class="post-featured-image">';
+					the_post_thumbnail('large'); 
+					echo '</div>';
+				}
 
-				<?php
-				// Get the raw content without filters
 				$content = get_the_content();
+				$content = apply_filters( 'the_content', $content );
+				$content = str_replace( ']]>', ']]&gt;', $content );
 
-				// Output the full content directly
-				echo $content;
+				$paragraphs = preg_split( '/(<\/p>)/i', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+
+				$total_parts = count( $paragraphs );
+				$half = ceil( $total_parts / 2 );
+
+				$first_half = implode( '', array_slice( $paragraphs, 0, $half ) );
+				$second_half = implode( '', array_slice( $paragraphs, $half ) );
+
+				echo $first_half;
+
+				echo $second_half;
+
 				?>
 			</div>
 		</article>
+
 		<?php endwhile; ?>
+
+		<div class="post-navigation">
+			<div class="prev-post">
+				<?php previous_post_link('%link', '&lt; Previous'); ?>
+			</div>
+			<div class="next-post">
+				<?php next_post_link('%link', 'Next &gt;'); ?>
+			</div>
+		</div>
 	</div>
 
 	<!-- Right Sidebar (CTA Area) -->
 	<aside class="right-bar">
 		<div class="cta-column">
 			<div class="cta-box">
-				<h3 class="title">Contact Us</h3>
-				<a href="#" target="_blank" class="button primary-btn">Contact Us!</a>
+				<h3 class="title">Free Consultation</h3>
+				<a href="#" class="button primary-btn">Contact Us!</a>
 			</div>
 			<div class="cta-box box2">
-				<h3 class="title">Abot Us</h3>
-				<p>Learn More About Us</p>
+				<h3 class="title">Your journey starts here.</h3>
+				<p>Meet the team</p>
 				<a href="#"  class="button primary-btn calendly">Learn More</a>
 			</div>
 			<!-- New cta-box box3 for related blogs -->
@@ -113,8 +135,11 @@ $reading_time = ceil( $word_count / 150 );
 			</div>
 		</div>
 	</aside>
+
 </div>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
+
+
+
+
