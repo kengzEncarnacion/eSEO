@@ -216,6 +216,13 @@ aside.right-bar {
 	color: var(--right-box3-link-color);
 	background: transparent;
 }
+p.ez-toc-title {
+	color: var(--main-color);
+	font-weight: 700 !important;
+	font-size: 22px !important;
+	margin-bottom: 15px !important;
+	display: inline-block !important;
+}
 @media (max-width: 991px) {
 	.custom-single-container {
 		flex-direction: column;
