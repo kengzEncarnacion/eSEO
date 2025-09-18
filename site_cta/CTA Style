@@ -36,3 +36,60 @@ ease;
 .floating-form.is-active {
     transform: translateY(-40%) translateX(0%);
 }
+@media (max-width: 767px) {
+    .floating-form {
+        top: auto;
+        bottom: 0;
+        transform: translateY(-60px) translateX(-110%);
+    }
+    .floating-form.is-active {
+        transform: translateY(-60px) translateX(0%);
+    }
+    a.floating-widget.is-mobile {
+        display: initial;
+        position: initial;
+        transform: none !important;
+        background: transparent;
+        writing-mode: lr;
+        text-orientation: initial;
+        border-radius: 0px !important;
+        padding: 0px;
+    }
+    .mobile-cta {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0px;
+        justify-content: space-around;
+    }
+    div#mobile-footer-cta {
+        position: fixed;
+        bottom: 0;
+        background: #a08750;
+        left: 0;
+        right: 0;
+        z-index: 99999999;
+    }
+    .mobile-cta a {
+        width: 50%;
+        text-align: center;
+        padding: 10px 0px !important;
+        border: 2px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px ! Important;
+    }
+    a.floating-widget:before {
+        content: '\f783';
+        font-family: 'FontAwesome';
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    a.phone-widget:before {
+        content: '\f095';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+}
