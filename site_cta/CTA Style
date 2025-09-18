@@ -124,4 +124,7 @@ span.closer:hover {
 		font-size: 16px;
 		margin-right: 5px;
 	}
+	a.floating-widget:not(.is-mobile) {
+		display: none;
+	}
 }
