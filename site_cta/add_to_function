@@ -1,1 +1,11 @@
+function add_custom_footer_content() {
+    ?>
+    <a class="floating-widget" href="#">Schedule a FREE Discovery Call</a>
 
+    <div class="floating-form">
+        <span class="closer">Close</span><br>
+        <!-- INSERT FORM HERE -->
+    </div>
+    <?php
+}
+add_action('wp_footer', 'add_custom_footer_content');
