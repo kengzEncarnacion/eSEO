@@ -14,6 +14,9 @@ a.floating-widget {
 ease;
     z-index: 99;
 }
+a.floating-widget.in-active {
+    transform: translateX(-100%) translateY(-50%);
+}
 .floating-form.is-active {
     transform: translateY(-40%) translateX(0%);
 }
@@ -48,11 +51,17 @@ span.closer {
     padding: 2px 12px;
     border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 10px;
     transition: all 0.3s 
 ease;
 }
 span.closer:hover {
     transform: scale(.95);
+}
+@media (min-width: 768px) {
+    div#mobile-footer-cta {
+        display: none;
+    }
 }
 @media (max-width: 767px) {
     .floating-form {
