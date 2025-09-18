@@ -1,1 +1,13 @@
+jQuery(document).ready(function($) {
+	jQuery('a.floating-widget').click(function(e) {
+		e.preventDefault();
+		jQuery(this).addClass('in-active');
+		jQuery('.floating-form').addClass('is-active');
+	});
 
+	jQuery('span.closer').click(function() {
+		jQuery('a.floating-widget').removeClass('in-active');
+		jQuery('.floating-form').removeClass('is-active');
+	});
+
+});
