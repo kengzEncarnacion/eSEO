@@ -36,6 +36,24 @@ ease;
 .floating-form.is-active {
     transform: translateY(-40%) translateX(0%);
 }
+a.floating-widget:hover {
+    transform: scale(1.05) translateY(-50%) !important;
+    opacity: .9;
+}
+span.closer {
+    color: #fff;
+    float: right;
+    background: #a08750;
+    font-size: 12px;
+    padding: 2px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s 
+ease;
+}
+span.closer:hover {
+    transform: scale(.95);
+}
 @media (max-width: 767px) {
     .floating-form {
         top: auto;
