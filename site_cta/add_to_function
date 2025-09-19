@@ -4,7 +4,7 @@ function add_custom_footer_content() {
     <div class="floating-form">
       <span class="closer">Close</span>
       <br>
-      <!-- INSERT FORM HERE -->
+      <?php echo do_shortcode('[your_shortcode]'); ?>
     </div>
     <div id="mobile-footer-cta" class="mobile-footer-cta">
       <div class="mobile-cta">
