@@ -143,4 +143,8 @@ span.closer:hover {
 	a.floating-widget:not(.is-mobile) {
 		display: none;
 	}
+	.wd-cookies-popup.popup-display {
+		bottom: 50px;
+		z-index: 9999999999;
+	}
 }
