@@ -1,17 +1,39 @@
+/* SITE CTA */
 function add_custom_footer_content() {
-    ?>
-    <a class="floating-widget" href="#">Schedule a FREE Discovery Call</a>
-    <div class="floating-form">
-      <span class="closer">Close</span>
-      <br>
-      <?php echo do_shortcode('[your_shortcode]'); ?>
-    </div>
-    <div id="mobile-footer-cta" class="mobile-footer-cta">
-      <div class="mobile-cta">
-        <a class="floating-widget is-mobile" href="#">Schedule A Discovery Call</a>
-        <a class="phone-widget" href="tel:000-000-0000">000-000-0000</a>
-      </div>
-    </div>
-    <?php
-}
+?>
+<a class="floating-widget" href="#">Schedule a FREE Discovery Call</a>
+<div class="floating-form">
+	<span class="closer">Close</span>
+	<br>
+	<div class="sideform">
+		<h2>
+			Schedule Your Service
+		</h2>
+		<?php echo do_shortcode('[contact-form-7 id="e4efcb4" title="Contact form"]'); ?>
+	</div>
+</div>
+<div id="mobile-footer-cta" class="mobile-footer-cta">
+	<div class="mobile-cta">
+		<a class="floating-widget is-mobile" href="#">Schedule A Discovery Call</a>
+		<a class="phone-widget" href="tel:800-266-5243">800-266-5243</a>
+	</div>
+</div>
+
+<script>
+	jQuery(document).ready(function($) {
+		jQuery('a.floating-widget').click(function(e) {
+			e.preventDefault();
+			jQuery(this).addClass('in-active');
+			jQuery('.floating-form').addClass('is-active');
+		});
+
+		jQuery('span.closer').click(function() {
+			jQuery('a.floating-widget').removeClass('in-active');
+			jQuery('.floating-form').removeClass('is-active');
+		});
+
+	});
+</script>
+<?php
+									 }
 add_action('wp_footer', 'add_custom_footer_content');
