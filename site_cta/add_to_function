@@ -7,7 +7,7 @@ function add_custom_footer_content() {
 	<br>
 	<div class="sideform">
 		<h2>
-			Schedule Your Service
+			Schedule a FREE Discovery Call
 		</h2>
 		<?php echo do_shortcode('[contact-form-7 id="e4efcb4" title="Contact form"]'); ?>
 	</div>
