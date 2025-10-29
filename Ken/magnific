@@ -1,0 +1,45 @@
+<div class="mfp-hide team-info-pop">
+    <section class="mfp-with-anim wd-popup wd-popup-element woodmart-content-popup" style="background-color: #fff;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="team-popup">
+                    <div class="team-popup-feature"><img src=""></div>
+                    <div class="team-popup-title">
+                        <h4 class="team-name"></h4>
+                        <p class="team-position"></p>
+                    </div>
+                    <div class="team-popup-info"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+jQuery(document).ready(function($) {
+
+    jQuery(document).on('click', '.open-popup1', function(event) {
+        event.preventDefault();
+        
+        var teamImage = jQuery(this).find('.event-post-feature > img').attr('src');
+        var teamTitle = jQuery(this).find('.event-post-title').text();
+        var teamDesign = jQuery(this).find('.designation').text();
+        var teamText = jQuery(this).find('.team-info-text').text();
+        
+        jQuery(document).find('.team-info-pop .team-popup-feature > img').attr('src', teamImage);
+        jQuery(document).find('.team-info-pop .team-name').text(teamTitle);
+        jQuery(document).find('.team-info-pop .team-position').text(teamDesign);
+        jQuery(document).find('.team-info-pop .team-popup-info').text(teamText);
+        
+        jQuery(this).magnificPopup({
+            items: {
+                src: '.team-info-pop',
+                type: 'inline'
+            },
+            fixedContentPos: true,
+            showCloseBtn:true,
+        }).magnificPopup('open');
+
+    }); //click ends here	
+});
+</script>
