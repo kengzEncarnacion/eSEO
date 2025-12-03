@@ -139,9 +139,11 @@ $reading_time = ceil($word_count / 150);
 				?>
 			</div>		
 			<div class="cta-item">
-				<h2>Protect Your Home Today</h2>
-				<p>Trust Horizon West Roofing to provide the ultimate protection for your property against Central Florida’s extreme weather. Contact us now for a free consultation</p>
-				<a>Get Your Free Roof Inspection</a>
+				<div class="cta-inner">
+					<h2>Protect Your Home Today</h2>
+					<p>Trust Horizon West Roofing to provide the ultimate protection for your property against Central Florida’s extreme weather. Contact us now for a free consultation</p>
+					<a>Get Your Free Roof Inspection</a>
+				</div>
 			</div>
 			<div class="blog-img">
 				<img class="img-responsive" src="#" alt="Blog post Image"
