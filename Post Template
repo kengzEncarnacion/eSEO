@@ -10,7 +10,7 @@ $reading_time = ceil($word_count / 150);
 
 ?>
 <!-- Page Title -->
-<div class="custom-blog-header" ">
+<div class="custom-blog-header">
 	<div class="custom-blog-header-inner">
 	<!-- Categories -->
 		<div class="custom-blog-categories">
