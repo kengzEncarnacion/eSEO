@@ -14,6 +14,7 @@ $reading_time = ceil($word_count / 150);
 	/* SINGLE POST */
 	:root {
 		--main-color: #F8AF1D;
+        --main-font: "DM Sans", Sans-serif;
 		/* BANNER */
 		--post-bnr: url("https://hwroof.com/wp-content/uploads/2025/10/gutter-install-banner.webp");
 		--post-bnr-title-color: #fff;
@@ -69,7 +70,7 @@ $reading_time = ceil($word_count / 150);
 		margin-bottom: 15px;
 	}
 	.csb-content {
-		font-family: "DM Sans", Sans-serif;
+		font-family: var(--main-font);
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.6em;
@@ -98,7 +99,7 @@ $reading_time = ceil($word_count / 150);
 		display: block;
 		max-width: max-content;
 		margin-top: 30px;
-		font-family: "DM Sans", Sans-serif;
+		font-family: var(--main-font);
 		font-size: 15px;
 		font-weight: 500;
 		color: #000000;
@@ -126,14 +127,14 @@ $reading_time = ceil($word_count / 150);
 		z-index: 1;
 	}
 	.right-bar .cta-box .title {
-		font-family: "DM Sans", Sans-serif;
+		font-family: var(--main-font);
 		font-size: 36px;
 		font-weight: 700;
 		color: #FFA300;
 	}
 	.right-bar .cta-box.box2 p {
 		padding: 0 0 30px;
-		font-family: "DM Sans", Sans-serif;
+		font-family: var(--main-font);
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.6em;
@@ -166,7 +167,7 @@ $reading_time = ceil($word_count / 150);
 		}
 		#ez-toc-container a {
 			font-size: 14px !important;
-			font-family: 'DM Sans';
+			font-family: var(--main-font);
 			margin-bottom: 5px !important;
 		}
 		div#ez-toc-container {
