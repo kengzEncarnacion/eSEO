@@ -147,6 +147,40 @@ $reading_time = ceil($word_count / 150);
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	@media (max-width: 767px) {
+		.custom-blog-header {
+			padding: 80px 20px;
+		}
+		.cta-column, .custom-toc-sticky {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+		.single-post .custom-toc-sticky, .single-post .right-bar {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+			width: 100% !important;
+		}
+		.cta-column, .custom-toc-sticky {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		#ez-toc-container a {
+			font-size: 14px !important;
+			font-family: 'DM Sans';
+			margin-bottom: 5px !important;
+		}
+		div#ez-toc-container {
+			width: 100%;
+		}
+		.cta-item {
+			background-position: center center;
+			min-height: auto !important;
+			padding: 30px 20px;
+		}
+		.cta-inner {
+			max-width: 100%;
+		}
+	}
 
 </style>
 
