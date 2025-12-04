@@ -47,7 +47,7 @@ $reading_time = ceil($word_count / 150);
 
 	/* ADD CSS MODIFICATION HERE */
 	.custom-blog-header {
-		padding: 120px 0px;
+		padding: 120px 20px;
 	}
 	.custom-blog-header-inner {
 		max-width: 1200px;
