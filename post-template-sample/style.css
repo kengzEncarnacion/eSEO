@@ -1,0 +1,140 @@
+/* SINGLE BLOG */
+/* BLOG CTA */
+.cta-item {
+	padding: 50px;
+	background: url(https://lasereraserparamus.com/wp-content/uploads/2025/12/Mask-group.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.blog-img img {
+	width: 100%;
+}
+.cta-item h2 {
+	color: #000;
+	line-height: 1.2;
+	font-weight: 600;
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+.cta-item .info-box-inner {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.6;
+}
+.cta-item .box-icon-wrapper {
+	width: 50%;
+}
+.cta-item .box-icon-wrapper img {
+	border-radius: 40px;
+	width: 100%;
+}
+.cta-item .info-box-content a {
+	color: #fff;
+	background: #B57949;
+	display: block;
+	margin: 20px 0px;
+	max-width: max-content;
+	padding: 12px 24px;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 7px;
+}
+.cb-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cta-box h3 {
+	color: #000;
+	font-size: 24px;
+	line-height: 1.2;
+	font-weight: 600;
+}
+.cta-box p {
+	font-size: 16px;
+	color: #000;
+	line-height: 1.6;
+}
+a.cb-btn.btn {
+	border-radius: 20px;
+	padding: 15px 30px;
+	font-size: 16px;
+	font-weight: 700;
+}
+.cta-box {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 30px 30px 250px;
+	position: sticky;
+	top: 100px;
+}
+.cta-box {
+	background: url(https://northeastdoulas.com/wp-content/uploads/2025/12/Frame-48095981.png) !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: top center !important;
+}
+
+.single-post .wd-content-area.site-content {
+	width: 100%;
+	max-width: 1330px;
+}
+.blog-img {
+	margin: 20px 0 !important;
+}
+.cta-item {
+	background: url(https://northeastdoulas.com/wp-content/uploads/2025/12/Frame-48095980.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left center;
+	padding: 40px 50px;
+	border: 1px solid #ccc;
+	margin: 20px 0px !Important;
+}
+.cta-item .info-box-content {
+	max-width: 60%;
+}
+.single-post .csb-content {
+	margin-top: 0px !important;
+}
+.cta-box a.btn.primary-btn {
+	color: #fff;
+	background: #B57949;
+	display: block;
+	margin: 20px 0px;
+	max-width: max-content;
+	padding: 12px 24px;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 7px;
+}
+.csb-content .post-single-page .entry-content {
+	padding: 30px;
+}
+.csb-content img {
+	width: 100%;
+}
+@media (max-width: 1024px) {
+	.cb-container .col-md-3 {
+		display: none;
+	}
+	.cb-content {
+		flex: auto !important;
+		max-width: 100% !important;
+	}
+	.single-post .csb-content {
+		padding: 30px;
+		max-width: 95%;
+		margin: 0 auto !important;
+	}
+}
+@media (max-width: 767px) {
+	.cta-item {
+		flex-direction: column;
+		padding: 30px;
+	}
+	.cta-item > div {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+}
