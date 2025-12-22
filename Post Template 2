@@ -175,6 +175,10 @@ $reading_time = ceil($word_count / 150);
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.post-navigation {
+		display: flex;
+		justify-content: space-between;
+	}
 	@media (max-width: 767px) {
 		.custom-blog-header {
 			padding: 80px 20px;
@@ -287,8 +291,8 @@ $reading_time = ceil($word_count / 150);
 			</div>		
 			<div class="cta-item">
 				<div class="cta-inner">
-					<h2>Protect Your Home Today</h2>
-					<p>Trust Horizon West Roofing to provide the ultimate protection for your property against Central Florida’s extreme weather. Contact us now for a free consultation</p>
+					<h2>Lorem ipsum dolor sit amet</h2>
+					<p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 					<a href="/contact-us/">Get Your Free Roof Inspection</a>
 				</div>
 			</div>
@@ -317,8 +321,8 @@ $reading_time = ceil($word_count / 150);
 				<div class="cta-column">
 					<div class="cta-box box2">
 						<div class="cta-inner-box">
-							<h3 class="title">Invest In A Solid Roof Today!</h3>
-							<p>At Horizon West Roofing, LLC we understand how crucial a good roofing system is to your safety and comfort.</p>
+							<h3 class="title">Lorem ipsum is placeholder text</h3>
+							<p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
 							<a href="/contact-us/"  class="button primary-btn calendly">Contact Us</a>
 						</div>
 					</div>
