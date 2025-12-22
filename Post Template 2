@@ -102,6 +102,7 @@ $reading_time = ceil($word_count / 150);
 		min-height: 350px;
 		display: grid;
 		place-content: center;
+        position: relative;
 	}
 	.cta-item .cta-inner {
 		position: relative;
