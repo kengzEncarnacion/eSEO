@@ -14,7 +14,7 @@ $reading_time = ceil($word_count / 150);
 	/* SINGLE POST */
 	:root {
 		--main-color: #F8AF1D;
-        --main-font: "DM Sans", Sans-serif;
+        /*--main-font: "DM Sans", Sans-serif;*/
 		/* BANNER */
 		--post-bnr: url("https://hwroof.com/wp-content/uploads/2025/10/gutter-install-banner.webp");
 		--post-bnr-title-color: #fff;
@@ -26,6 +26,7 @@ $reading_time = ceil($word_count / 150);
 		--post-content-bg: #fff;
 		--post-content-color: #000;
 		--post-heading-color: #000;
+		--cta-item-bg: url(https://hwroof.com/wp-content/uploads/2025/12/blog-cta.jpg);
 
 		/* LEFT ASIDE */
 		--reading-color: #F8AF1D;
@@ -83,7 +84,7 @@ $reading_time = ceil($word_count / 150);
 		margin-bottom: 15px;
 	}
 	.csb-content {
-		font-family: var(--main-font);
+		/*font-family: var(--main-font);*/
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.6em;
@@ -93,7 +94,7 @@ $reading_time = ceil($word_count / 150);
 		margin-bottom: 10px;
 	}
 	.cta-item {
-		background: url(https://hwroof.com/wp-content/uploads/2025/12/blog-cta.jpg);
+		background: var(--cta-item-bg);
 		padding: 50px 30px;
 		margin: 20px 0;
 		background-repeat: no-repeat;
@@ -121,12 +122,12 @@ $reading_time = ceil($word_count / 150);
 		max-width: 60%;
 	}
 	.cta-item a, .cta-box.box2 a.button {
-		background: #f8af1d;
+		background: var(--main-color);
 		padding: 12px 24px;
 		display: block;
 		max-width: max-content;
 		margin-top: 30px;
-		font-family: var(--main-font);
+		/*font-family: var(--main-font);*/
 		font-size: 15px;
 		font-weight: 500;
 		color: #000000;
@@ -154,14 +155,14 @@ $reading_time = ceil($word_count / 150);
 		z-index: 1;
 	}
 	.right-bar .cta-box .title {
-		font-family: var(--main-font);
+		/*font-family: var(--main-font);*/
 		font-size: 36px;
 		font-weight: 700;
 		color: #FFA300;
 	}
 	.right-bar .cta-box.box2 p {
 		padding: 0 0 30px;
-		font-family: var(--main-font);
+		/*font-family: var(--main-font);*/
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.6em;
@@ -177,6 +178,7 @@ $reading_time = ceil($word_count / 150);
 	}
 	.post-navigation {
 		display: flex;
+		margin-top: 30px;
 		justify-content: space-between;
 	}
 	@media (max-width: 767px) {
@@ -198,7 +200,7 @@ $reading_time = ceil($word_count / 150);
 		}
 		#ez-toc-container a {
 			font-size: 14px !important;
-			font-family: var(--main-font);
+			/*font-family: var(--main-font);*/
 			margin-bottom: 5px !important;
 		}
 		div#ez-toc-container {
