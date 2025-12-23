@@ -104,6 +104,9 @@ $reading_time = ceil($word_count / 150);
 		display: grid;
 		place-content: center;
         position: relative;
+    	border: 1px solid var(--main-color);
+    	border-radius: 20px;
+    	overflow: hidden;
 	}
 	.cta-item .cta-inner {
 		position: relative;
