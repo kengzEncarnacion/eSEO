@@ -124,9 +124,7 @@ $reading_time = ceil($word_count / 150);
 	.cta-item a, .cta-box.box2 a.button {
 		background: var(--main-color);
 		padding: 12px 24px;
-		display: block;
 		max-width: max-content;
-		margin-top: 30px;
 		/*font-family: var(--main-font);*/
 		font-size: 15px;
 		font-weight: 500;
