@@ -1,0 +1,75 @@
+// Sorting SASWP REVIEWS
+function enqueue_review_sort_script() {
+    if (is_page() || is_single()) {
+        wp_add_inline_script('jquery-core', "
+            jQuery(document).ready(function($){
+                //Sort all SASWP reviews
+                $('.saswp-r1').each(function(){
+                    var reviewContainer = $(this);
+                    var ulAll = reviewContainer.find('ul');
+                    ulAll.each(function(){
+                        var reviews = $(this).find('li');
+
+                        // Sort by content length
+                        reviews.sort(function(a, b){
+                            var textA = $(a).find('.saswp-rc-cnt p').text().trim();
+                            var textB = $(b).find('.saswp-rc-cnt p').text().trim();
+
+                            if(textA && !textB) return -1;
+                            if(!textA && textB) return 1;
+
+                            return textB.length - textA.length;
+                        });
+
+                        $(this).empty().append(reviews);
+                    });
+                });
+
+                // apply 4-per-page pagination only for 4-column layouts
+                $('.saswp-r1').each(function(){
+                    var reviewContainer = $(this);
+                    var ul = reviewContainer.find('ul[style*=\"grid-template-columns: 1fr 1fr 1fr 1fr\"]');
+                    if(!ul.length) return;
+
+                    var reviews = ul.find('li');
+
+                    // update data-id for pagination 
+                    reviews.each(function(index){
+                        var pageNum = Math.floor(index / 4) + 1;
+                        $(this).attr('data-id', pageNum);
+                        if(pageNum === 1){
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+
+                    // Pagination links
+                    reviewContainer.find('.saswp-grid-page').each(function(){
+                        var pageId = parseInt($(this).attr('data-id'));
+                        if(pageId === 1){
+                            $(this).show().addClass('active');
+                        } else {
+                            $(this).hide().removeClass('active');
+                        }
+                    });
+
+                    // Pagination click
+                    reviewContainer.find('.saswp-grid-page').off('click').on('click', function(e){
+                        e.preventDefault();
+                        var pageNum = parseInt($(this).attr('data-id'));
+
+                        reviews.hide().filter('[data-id=\"'+pageNum+'\"]').show();
+
+                        reviewContainer.find('.saswp-grid-page').removeClass('active');
+                        $(this).addClass('active');
+                    });
+                });
+
+                // Show containers after sorting
+                $('.saswp-r1').css('display', 'block');
+            });
+        ");
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_review_sort_script');
